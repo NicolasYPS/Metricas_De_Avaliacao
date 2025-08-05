@@ -150,6 +150,6 @@ VP / (VP + FP)
 Nicolas Souza  
 [LinkedIn](https://linkedin.com/in/nicolas-y-p-souza) | [GitHub](https://github.com/NicolasYPS)
 
-**Projeto desenvolvido para a disciplina de Avaliação de Metricas para Machine Learned**
+**Projeto desenvolvido para a disciplina de Avaliação de Metricas para Machine Learning**
 **Este projeto demonstra o cálculo de métricas de avaliação com base em uma matriz de confusão fornecida para a atividade** 
      
