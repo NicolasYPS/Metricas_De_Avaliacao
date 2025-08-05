@@ -1,0 +1,73 @@
+# Ambiente virtual
+venv/
+.env
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.pycache
+*.egg-info
+dist/
+build/
+*.egg
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.swn
+*.lock
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# Dados
+data/
+*.csv
+*.xlsx
+*.xls
+*.json
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Modelos (caso você tenha)
+models/
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.joblib
+
+# Diretório de resultados
+results/
+output/
+
+# Arquivos de configuração sensíveis
+secrets.py
+config.py
+.env
+.env.local
+.env.*.local
+
+# Arquivos temporários do Git
+*.orig
+
+# Cache do sistema
+.cache/
