@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import roc_curve, auc, accuracy_score, precision_score, recall_score, f1_score
 
-# Sua matriz de confusão EXATAMENTE como você definiu
+# Matriz de confusão
 confusion_matrix_normalized = np.array([
     [1.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00],
     [0.00, 0.99, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00],
@@ -17,14 +17,12 @@ confusion_matrix_normalized = np.array([
     [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01, 0.00, 0.98]
 ])
 
-# NÃO FAZEMOS NENHUMA NORMALIZAÇÃO OU AJUSTE NA MATRIZ ORIGINAL
-# Usamos exatamente os valores que você definiu
 
-# Assumindo 100 amostras por classe (total de 1000 amostras)
+# Assumindo 100 amostras por classe e 10 classes
 samples_per_class = 100
 total_samples = samples_per_class * 10
 
-# Convertendo para matriz de contagens absolutas SEM AJUSTES
+# Convertendo para matriz de contagens absolutas
 confusion_matrix = np.round(confusion_matrix_normalized * samples_per_class).astype(int)
 
 # Para cálculos de métricas, precisamos de vetores y_true e y_pred
@@ -79,7 +77,7 @@ print("\n===== Métricas por Classe =====")
 for metric in class_metrics:
     print(f"Classe {metric['class']}: Precisão = {metric['precision']:.4f}, Recall = {metric['recall']:.4f}, F1 = {metric['f1']:.4f}")
 
-# Plotando a matriz de confusão EXATAMENTE como você definiu
+# Plotando a matriz de confusão 
 plt.figure(figsize=(12, 10))
 sns.heatmap(confusion_matrix_normalized, annot=True, cmap='Blues', fmt='.2f', 
             cbar_kws={'label': 'Proporção'})
@@ -103,7 +101,6 @@ for i in range(10):
     y_score = []
     
     for j in range(len(y_true)):
-        # Usamos os valores EXATOS da matriz normalizada
         y_score.append(confusion_matrix_normalized[y_true[j], y_pred[j]])
     
     # Calculando FPR, TPR e thresholds
